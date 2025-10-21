@@ -1,0 +1,13 @@
+@echo off
+echo Starting Farm2Home Application...
+
+echo Starting Backend...
+start cmd /k "cd backend && npm start"
+
+timeout /t 3 /nobreak > nul
+
+echo Starting Frontend...
+start cmd /k "cd frontend && npm start"
+
+echo Both servers are starting...
+pause
